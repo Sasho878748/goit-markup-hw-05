@@ -641,11 +641,9 @@ font-style: normal; */
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
   cursor: pointer;
   position: relative;
-  overflow: hidden;
   
-}
-
-.overflow {
+  
+  
 }
 
 .animation-card-text {
@@ -662,6 +660,7 @@ font-style: normal; */
   top: 40px;
   opacity: 0;
   transition: 250ms var(--timing-function);
+  
 }
 
 .item-card:hover .animation-card-text,
@@ -686,8 +685,9 @@ font-style: normal; */
 .item-card:hover .product-overlay,
 .item-card:focus .product-overlay {
   opacity: 1;
-  transition: 250ms var(--timing-function);
-  transform: translateY(0);
+  transition: 2500ms var(--timing-function);
+  transform: translateY(0%);
+  
 }
 
 .item-card:hover,
@@ -706,5 +706,6 @@ font-style: normal; */
 .item-btn:not(:last-child) {
 }
 
-.img-item {
+.item-card .img-item {
+overflow: hidden;
 }
