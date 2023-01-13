@@ -48,7 +48,7 @@ button {
 
 .link {
   text-decoration: none;
-  transition: 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 .link:hover,
 .link:focus {
@@ -128,7 +128,11 @@ button {
   position: relative;
 }
 
-.header-link::after {
+.header-link.current {
+  color: var(--main-btn-color-2);
+}
+
+.header-link.current::after {
   content: '';
   width: 100%;
   height: 4px;
@@ -139,13 +143,6 @@ button {
   position: absolute;
   left: 0;
   bottom: 0;
-  opacity: 0;
-  transition: opacity 250ms var(--timing-function);
-}
-
-.header-link:hover::after,
-.header-link:focus::after {
-  opacity: 1;
 }
 
 .header-link-adress {
@@ -219,7 +216,8 @@ button {
   border-color: var(--main-button-color);
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function), border-color 250ms var(--timing-function);
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -383,7 +381,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function);
 }
 
 .list-link-svg:hover,
@@ -413,8 +411,6 @@ button {
 .customers-item {
   width: 168px;
   height: 88px;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
 }
 
 .customers-link {
@@ -424,7 +420,9 @@ button {
   align-items: center;
   justify-content: center;
   fill: #8e8f99;
-  transition: 250ms var(--timing-function);
+  transition: fill 250ms var(--timing-function), border-color 250ms var(--timing-function);
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
 }
 
 .customers-link:hover,
@@ -497,7 +495,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function);
 }
 
 .list-link-svg-footer:hover,
@@ -557,7 +555,8 @@ button {
 
   width: 116px;
   height: 48px;
-  transition: 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function), border-color 250ms var(--timing-function);
 }
 
 .portfolio-btn:hover,
@@ -567,7 +566,6 @@ button {
   cursor: pointer;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
   border-color: var(--main-button-color);
 }
 
@@ -597,7 +595,13 @@ button {
   background-color: --main-light-color;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
   cursor: pointer;
-  transition: 250ms var(--timing-function);
+  transition: box-shadow 250ms var(--timing-function);
+}
+
+.item-card:hover,
+.item-card:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .img-overlay {
@@ -626,17 +630,11 @@ button {
   padding-bottom: 164px;
   padding-right: 32px;
   transform: translateY(100%);
-  transition: 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function);
 }
 
 .item-card:hover .animation-card-text {
   transform: translateY(0%);
-}
-
-.item-card:hover,
-.item-card:focus {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .card-text {
